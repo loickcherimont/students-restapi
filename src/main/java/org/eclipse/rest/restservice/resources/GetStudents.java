@@ -1,4 +1,4 @@
-/********************************************************************************
+/** ******************************************************************************
  * Copyright (c) 10/19/2022 Contributors to the Eclipse Foundation
  *
  * See the NOTICE file(s) distributed with this work for additional
@@ -11,20 +11,30 @@
  * https://www.eclipse.org/org/documents/edl-v10.php.
  *
  * SPDX-License-Identifier: EPL-2.0 OR BSD-3-Clause
- ********************************************************************************/
+ ******************************************************************************* */
 package org.eclipse.rest.restservice.resources;
 
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
+import org.eclipse.rest.data.Students;
 
-@Path("hello")
-public class RestResource {
-    
+//@Path("hello")
+//public class GetStudents {
+//    
+//    @GET
+//    @Produces(MediaType.APPLICATION_JSON)
+//    public HelloRecord hello(){
+//        return new HelloRecord("Hello from Jakarta EE");
+//    }
+//}
+@Path("students")
+public class GetStudents {
+
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public HelloRecord hello(){
-        return new HelloRecord("Hello from Jakarta EE");
+    public Students students() {
+        return new Students();
     }
 }

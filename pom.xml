@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.eclipse.rest</groupId>
-    <artifactId>restmodel</artifactId>
+    <artifactId>restservicestudents</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
-    <name>restmodel</name>
+    <name>restservicestudents</name>
     
     <properties>
         <maven.compiler.release>17</maven.compiler.release>
@@ -24,7 +24,7 @@
     </dependencies>
     
     <build>
-        <finalName>restmodel</finalName>
+        <finalName>restservice</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
