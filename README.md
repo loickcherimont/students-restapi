@@ -3,4 +3,5 @@
 ## :white_check_mark: To Do
 
 - [ ] Process errors ;
-- [ ] Debug `DeleteById` in `org.eclipse.rest.restservice.resources` pkg ; 
+- [x] Debug `DeleteById` in `org.eclipse.rest.restservice.resources` pkg ;
+- [ ] Clean code ;
