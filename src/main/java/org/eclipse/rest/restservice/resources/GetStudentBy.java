@@ -23,16 +23,14 @@ public class GetStudentBy {
     @Path("id/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public Student idService(@PathParam("id") int id) {
-        Students students = new Students();
-        return students.getStudents().get(id);
+        return Students.getStudents().get(id);
     }
 
     @GET
     @Path("firstname/{firstname}")
     @Produces(MediaType.APPLICATION_JSON)
     public Student firstNameService(@PathParam("firstname") String firstName) {
-        Students students = new Students();
-        for (Student student : students.getStudents().values()) {
+        for (Student student : Students.getStudents().values()) {
             if (student.getFirstName().equalsIgnoreCase(firstName)) {
                 return student;
             }
@@ -44,8 +42,7 @@ public class GetStudentBy {
     @Path("lastname/{lastname}")
     @Produces(MediaType.APPLICATION_JSON)
     public Student lastNameService(@PathParam("lastname") String lastName) {
-        Students students = new Students();
-        for (Student student : students.getStudents().values()) {
+        for (Student student : Students.getStudents().values()) {
             if (student.getLastName().equalsIgnoreCase(lastName)) {
                 return student;
             }
@@ -57,8 +54,7 @@ public class GetStudentBy {
     @Path("age/{age}")
     @Produces(MediaType.APPLICATION_JSON)
     public Student ageService(@PathParam("age") int age) {
-        Students students = new Students();
-        for (Student student : students.getStudents().values()) {
+        for (Student student : Students.getStudents().values()) {
             if (student.getAge() == age) {
                 return student;
             }

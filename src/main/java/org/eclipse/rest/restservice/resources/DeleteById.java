@@ -9,20 +9,21 @@ import jakarta.ws.rs.Path;
 import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
-import org.eclipse.rest.beans.Student;
+import jakarta.ws.rs.core.Response;
 import org.eclipse.rest.data.Students;
 
 /**
  *
  * @author loickcherimont
  */
-@Path("delete")
+@Path("delete-student")
 public class DeleteById {
     
     @DELETE
-    @Path("{id}")
+    @Path("id/{id}")
     @Produces(MediaType.TEXT_PLAIN)
     public String deleteService(@PathParam("id") int id) {
-        return "Student id: " + id + ", removed, with SUCCESS!";
+        Students.deleteById(id);
+        return "Student deleted with SUCCESS";
     }
 }

@@ -18,6 +18,8 @@ import jakarta.ws.rs.GET;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
+import java.util.HashMap;
+import org.eclipse.rest.beans.Student;
 import org.eclipse.rest.data.Students;
 
 //@Path("hello")
@@ -34,7 +36,7 @@ public class GetStudents {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public Students students() {
-        return new Students();
+    public HashMap<Integer, Student> students() {
+        return Students.getStudents();
     }
 }
