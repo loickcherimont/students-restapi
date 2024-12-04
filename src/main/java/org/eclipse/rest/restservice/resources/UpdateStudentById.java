@@ -5,6 +5,7 @@
 package org.eclipse.rest.restservice.resources;
 
 import jakarta.ws.rs.POST;
+import jakarta.ws.rs.PUT;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.Produces;
@@ -19,7 +20,8 @@ import org.eclipse.rest.data.Students;
 @Path("update-student")
 public class UpdateStudentById {
     
-    @POST
+    // @PATCH
+    @PUT
     @Path("id/{id}")
     @Produces(MediaType.TEXT_PLAIN)
     public String update(@PathParam("id") int id, @QueryParam("firstname") String firstName, @QueryParam("lastname") String lastName, @QueryParam("age") int age) {
